@@ -2,14 +2,14 @@ package me.jimmy.advanced.v3;
 
 import lombok.RequiredArgsConstructor;
 import me.jimmy.advanced.trace.TraceStatus;
-import me.jimmy.advanced.trace.logtrace.FieldLogTrace;
+import me.jimmy.advanced.trace.logtrace.LogTrace;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class OrderServiceV3 {
     private final OrderRepositoryV3 orderRepository;
-    private final FieldLogTrace trace;
+    private final LogTrace trace;
 
     public void orderItem(String itemId) {
         TraceStatus status = null;
